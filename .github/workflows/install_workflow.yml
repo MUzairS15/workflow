@@ -1,0 +1,19 @@
+name: Install workflow
+on: workflow_dispatch
+
+jobs:
+  copy-file:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Pushes workflow file
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ inputs.api_token }}
+      with:
+        source_file: './install_workflow.yml'
+        destination_repo: ${{ inputs.dest_repo }}
+        destination_folder: '.github'
+        commit_message: 'A custom message for the commit'
