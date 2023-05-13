@@ -19,7 +19,7 @@ jobs:
       env:
         API_TOKEN_GITHUB: ${{ inputs.api_token }}
       with:
-        source_file: './workflow.yml'
+        source_file: '.github/workflows/workflow.yml'
         destination_repo: ${{ inputs.dest_repo }}
         destination_folder: '.github'
         commit_message: 'A custom message for the commit'
