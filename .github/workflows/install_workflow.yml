@@ -1,5 +1,11 @@
 name: Install workflow
-on: workflow_dispatch
+on: 
+  workflow_dispatch:
+    inputs:
+      dest_repo:
+        type: string
+      api_token:
+        type: environment
 
 jobs:
   copy-file:
