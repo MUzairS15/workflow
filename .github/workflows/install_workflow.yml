@@ -5,7 +5,7 @@ on:
       dest_repo:
         type: string
       api_token:
-        type: environment
+        type: string
 
 jobs:
   copy-file:
