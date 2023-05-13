@@ -1,0 +1,4 @@
+name: This is a demo workflow for MeshMap
+jobs:
+  echo:
+    run: echo "test"
